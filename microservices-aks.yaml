@@ -1,0 +1,159 @@
+apiVersion: apps/v1
+
+kind: Deployment
+
+metadata:
+
+  name: aspnet5microservices-api1
+  labels:
+    app: aspnet5microservices-api1
+
+spec:
+
+  replicas: 1
+
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+
+      maxSurge: 1
+
+      maxUnavailable: 1
+
+  minReadySeconds: 5 
+  selector:
+    matchLabels:
+      app: aspnet5microservices-api1
+  template:
+
+    metadata:
+
+      labels:
+
+        app: aspnet5microservices-api1
+
+    spec:
+
+      containers:
+
+      - name: aspnet5microservices-api1
+
+        image: __ACR__/aspnet5microservice.api1:latest
+
+        imagePullPolicy: Always
+
+        ports:
+
+        - containerPort: 7379
+
+        resources:
+
+          requests:
+
+            cpu: 250m
+
+          limits:
+
+            cpu: 500m
+
+---
+
+apiVersion: v1
+
+kind: Service
+
+metadata:
+
+  name: aspnet5microservices-api1
+
+spec:
+
+  type: LoadBalancer
+
+  ports:
+
+  - port: 80
+
+  selector:
+    app: aspnet5microservices-api1
+
+---
+
+apiVersion: apps/v1
+
+kind: Deployment
+
+metadata:
+
+  name: aspnet5microservices-api2
+  labels:
+    app: aspnet5microservices-api2
+
+spec:
+
+  replicas: 1
+
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+
+      maxSurge: 1
+
+      maxUnavailable: 1
+
+  minReadySeconds: 5 
+  selector:
+    matchLabels:
+      app: aspnet5microservices-api2
+  template:
+
+    metadata:
+
+      labels:
+
+        app: aspnet5microservices-api2
+
+    spec:
+
+      containers:
+
+      - name: aspnet5microservices-api2
+
+        image: __ACR__/aspnet5microservice.api2:latest
+
+        imagePullPolicy: Always
+
+        ports:
+
+        - containerPort: 8379
+
+        resources:
+
+          requests:
+
+            cpu: 250m
+
+          limits:
+
+            cpu: 500m
+
+---
+
+apiVersion: v1
+
+kind: Service
+
+metadata:
+
+  name: aspnet5microservices-api2
+
+spec:
+
+  type: LoadBalancer
+
+  ports:
+
+  - port: 80
+
+  selector:
+    app: aspnet5microservices-api2

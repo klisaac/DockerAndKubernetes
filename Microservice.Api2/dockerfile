@@ -1,0 +1,29 @@
+#See https://aka.ms/containerfastmode to understand how Visual Studio uses this Dockerfile to build your images for faster debugging.
+
+FROM mcr.microsoft.com/dotnet/aspnet:5.0-buster-slim AS base
+MAINTAINER Isaac Baby
+
+WORKDIR /app
+EXPOSE 80
+EXPOSE 443
+# Allow 1433 for SQL Server Access
+EXPOSE 1433
+
+ #ADD localhost.cer /usr/share/ca-certificates/extra/localhost.cer
+ #RUN update-ca-certificates
+
+FROM mcr.microsoft.com/dotnet/sdk:5.0-buster-slim AS build
+WORKDIR /src
+COPY ["Microservice.Api2/Microservice.Api2.csproj", "Microservice.Api2/"]
+RUN dotnet restore "Microservice.Api2/Microservice.Api2.csproj"
+COPY . .
+WORKDIR "/src/Microservice.Api2"
+RUN dotnet build "Microservice.Api2.csproj" -c Release -o /app/build
+
+FROM build AS publish
+RUN dotnet publish "Microservice.Api2.csproj" -c Release -o /app/publish
+
+FROM base AS final
+WORKDIR /app
+COPY --from=publish /app/publish .
+ENTRYPOINT ["dotnet", "Microservice.Api2.dll"]

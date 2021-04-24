@@ -1,0 +1,52 @@
+version: '3.4'
+
+services:
+  microservice.api1:
+    container_name: 'microservice.api1'
+    image: 'aspnet5microservice.api1'
+    build:
+        context: .
+        dockerfile: Microservice.Api1/dockerfile
+    volumes:
+        - ./Microservice.Api1:/app
+#    ports:
+#        - "5500:80"
+#        - "5501:443"
+#    networks:
+#      - aspnet5microservices_app-network
+#    depends_on:
+#      - mssql
+
+  microservice.api2:
+    container_name: 'microservice.api2'
+    image: 'aspnet5microservice.api2'
+    build:
+        context: .
+        dockerfile: Microservice.Api2/dockerfile
+    volumes:
+        - ./Microservice.Api2:/app
+#    ports:
+#        - "7500:80"
+#        - "7501:443"
+#    networks:
+#      - aspnet5microservices_app-network
+#    depends_on:
+#      - mssql
+
+#  mssql:
+#      container_name: 'microservice.mssql'    
+#      image: 'microsoft/mssql-server-linux'
+#      ports:
+#          - '1433:1433'
+#      environment:
+#            SA_PASSWORD: 'Welcome@123'
+#            ACCEPT_EULA: 'Y'
+#      volumes:
+#          - app_docker_db:/var/opt/mssql/data
+
+#volumes:
+#  app_docker_db:
+
+#networks:
+#  aspnet5microservices_app-network:
+#    driver: bridge
