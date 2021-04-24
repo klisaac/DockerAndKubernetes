@@ -1,0 +1,54 @@
+{
+
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/employee",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "microservice.api1",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/api1/employee/",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/employee/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "microservice.api1",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/api1/employee/{id}",
+      "UpstreamHttpMethod": [ "GET", "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/employee",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "microservice.api2",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/api2/employee",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/employee/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "microservice.api2",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/api2/employee/{id}",
+      "UpstreamHttpMethod": [ "GET", "DELETE" ]
+    }
+  ]
+
+}

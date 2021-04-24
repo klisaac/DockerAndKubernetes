@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <UserSecretsId>09459ea7-c992-41c0-9920-d215fe0b5c4e</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.9" />
+    <PackageReference Include="Ocelot" Version="17.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="..\.dockerignore">
+      <DependentUpon>dockerfile</DependentUpon>
+    </None>
+  </ItemGroup>
+
+</Project>
