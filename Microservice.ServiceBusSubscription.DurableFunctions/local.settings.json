@@ -1,0 +1,16 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+    "MicroserviceTopic": "topic-microservice",
+    "Api2Subsciption": "subscription-api2",
+    "ServiceBusConnectionString": "Endpoint=sb://sb-dev-isaac.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=l/ISD5tNDlD5AX67+a8uYWbSnTYHwHX7nJrW1bqGBL0=",
+    "AzureKeyVaultEndpoint": "https://microservice-keyvault.vault.azure.net/"
+  },
+  "AppConfiguration": {
+    "ApiBaseUrl": "https://microservice-api2.azurewebsites.net/api/",
+    "ApiController": "Employee",
+    "ApiAction": "create"
+  }
+}
