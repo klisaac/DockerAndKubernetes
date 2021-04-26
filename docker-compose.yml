@@ -9,13 +9,13 @@ services:
         dockerfile: Microservice.Api1/Dockerfile
     volumes:
         - ./Microservice.Api1:/app
-    ports:
-        - "5500:80"
-        - "5501:443"
-    networks:
-      - aspnet5microservices_app-network
-    depends_on:
-      - mssql
+#    ports:
+#        - "5500:80"
+#        - "5501:443"
+#    networks:
+#      - aspnet5microservices_app-network
+#    depends_on:
+#      - mssql
 
   microservice.api2:
     container_name: 'microservice.api2'
@@ -25,13 +25,13 @@ services:
         dockerfile: Microservice.Api2/Dockerfile
     volumes:
         - ./Microservice.Api2:/app
-    ports:
-        - "7500:80"
-        - "7501:443"
-    networks:
-      - aspnet5microservices_app-network
-    depends_on:
-      - mssql
+#    ports:
+#        - "7500:80"
+#        - "7501:443"
+#    networks:
+#      - aspnet5microservices_app-network
+#    depends_on:
+#      - mssql
 
   microservice.gateway.api:
     container_name: 'microservice.gateway.api'
@@ -41,28 +41,28 @@ services:
         dockerfile: Microservice.Gateway.Api/Dockerfile
     volumes:
         - ./Microservice.Gateway.Api:/app
-    ports:
-        - "9500:80"
-        - "9501:443"
-    networks:
-      - aspnet5microservices_app-network
+#    ports:
+#        - "9500:80"
+#        - "9501:443"
+#    networks:
+#      - aspnet5microservices_app-network
 
-  mssql:
-      container_name: 'microservice.mssql'    
-      image: 'microsoft/mssql-server-linux'
-      ports:
-          - '1433:1433'
-      environment:
-            SA_PASSWORD: 'Welcome@123'
-            ACCEPT_EULA: 'Y'
-      volumes:
-          - app_docker_db:/var/opt/mssql/data
-      networks:
-      - aspnet5microservices_app-network
+#  mssql:
+#      container_name: 'microservice.mssql'    
+#      image: 'microsoft/mssql-server-linux'
+#      ports:
+#          - '1433:1433'
+#      environment:
+#            SA_PASSWORD: 'Welcome@123'
+#            ACCEPT_EULA: 'Y'
+#      volumes:
+#          - app_docker_db:/var/opt/mssql/data
+#      networks:
+#      - aspnet5microservices_app-network
 
-volumes:
-  app_docker_db:
+#volumes:
+#  app_docker_db:
 
-networks:
-  aspnet5microservices_app-network:
-    driver: bridge
+#networks:
+#  aspnet5microservices_app-network:
+#    driver: bridge

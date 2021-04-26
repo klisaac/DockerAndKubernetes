@@ -10,8 +10,8 @@ EXPOSE 443
 # Allow 1433 for SQL Server Access
 EXPOSE 1433
 
- ADD localhost.cer /usr/share/ca-certificates/extra/localhost.cer
- RUN update-ca-certificates
+ #ADD localhost.cer /usr/share/ca-certificates/extra/localhost.cer
+ #RUN update-ca-certificates
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0-buster-slim AS build
 WORKDIR /src

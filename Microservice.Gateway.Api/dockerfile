@@ -9,8 +9,8 @@ WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
- ADD localhost.cer /usr/share/ca-certificates/extra/localhost.cer
- RUN update-ca-certificates
+ #ADD localhost.cer /usr/share/ca-certificates/extra/localhost.cer
+ #RUN update-ca-certificates
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0-buster-slim AS build
 WORKDIR /src
