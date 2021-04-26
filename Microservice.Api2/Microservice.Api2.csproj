@@ -35,6 +35,9 @@
     <None Update="..\.dockerignore">
       <DependentUpon>dockerfile</DependentUpon>
     </None>
+    <None Update="..\.dockerignore">
+      <DependentUpon>Dockerfile</DependentUpon>
+    </None>
   </ItemGroup>
 
   <ItemGroup>

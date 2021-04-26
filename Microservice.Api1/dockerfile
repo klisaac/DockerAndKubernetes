@@ -10,9 +10,9 @@ EXPOSE 443
  #Allow 1433 for SQL Server Access
 EXPOSE 1433
 
- #ADD localhost.cer /usr/share/ca-certificates/extra/localhost.cer
- #RUN update-ca-certificates
-#
+ ADD localhost.cer /usr/share/ca-certificates/extra/localhost.cer
+ RUN update-ca-certificates
+
 FROM mcr.microsoft.com/dotnet/sdk:5.0-buster-slim AS build
 WORKDIR /src
 COPY ["Microservice.Api1/Microservice.Api1.csproj", "Microservice.Api1/"]
@@ -28,3 +28,14 @@ FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "Microservice.Api1.dll"]
+
+#FROM mcr.microsoft.com/dotnet/aspnet:5.0
+#
+#EXPOSE 80
+#EXPOSE 443
+ ##Allow 1433 for SQL Server Access
+#EXPOSE 1433
+#
+#WORKDIR /app
+#COPY ./bin/Release/net5.0/publish/ app/
+#ENTRYPOINT ["dotnet", "Microservice.Api1.dll"]
