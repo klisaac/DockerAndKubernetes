@@ -1,0 +1,77 @@
+tibaby06@outlook.com/thoompumkal2021
+
+Microsoft.Azure.WebJobs.ServiceBus: Microsoft Azure WebJobs SDK ServiceBus connection string 'Endpoint=sb://sb-development21.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;[Hidden Credential]' is missing or empty.
+
+1) az webapp deployment user set --user-name ibdeployuser --password Welcome@123 --subscription 392df79b-ab43-4ea9-be86-2089710fa0c0
+
+2) az webapp deployment source config-local-git --name aspnetcorewebapi-angularui --resource-group ResourceDotNetApps
+
+PS /home/isaac> az webapp deployment source config-local-git --name aspnetcorewebapi-angularui --resource-group ResourceDotNetApps
+{
+  "url": "https://ibdeployuser@aspnetcorewebapi-angularui.scm.azurewebsites.net/aspnetcorewebapi-angularui.git"
+}
+
+3) git remote add azure https://ibdeployuser@aspnetcorewebapi-angularui.scm.azurewebsites.net/aspnetcorewebapi-angularui.git
+4) git push azure master
+
+
+5) az webapp deployment list-publishing-credentials --name  aspnetcorewebapi-angularui --resource-group ResourceDotNetApps --query scmUri --output tsv
+
+
+git remote add azure \
+    https://{deploy_user_name}@MyUniqueApp.scm.azurewebsites.net/MyUniqueApp.git
+
+
+
+[
+  {
+    "cloudName": "AzureCloud",
+    "homeTenantId": "a72d3462-5db9-494b-a78e-4b70b15cceea",
+    "id": "392df79b-ab43-4ea9-be86-2089710fa0c0",
+    "isDefault": true,
+    "managedByTenants": [],
+    "name": "Free Trial",
+    "state": "Enabled",
+    "tenantId": "a72d3462-5db9-494b-a78e-4b70b15cceea",
+    "user": {
+      "name": "isaacbaby.t@gmail.com",
+      "type": "user"
+    }
+  }
+]
+az extension add --name azure-devops
+
+az devops configure --defaults organization=https://dev.azure.com/isaacbabyt project=AspNetCoreWebApi
+
+az repos create --name aspnetcorewebapi-angularui
+
+{
+  "defaultBranch": null,
+  "id": "6a321282-e85f-4c5d-8d78-c3a418193903",
+  "isFork": null,
+  "name": "aspnetcorewebapi-angularui",
+  "parentRepository": null,
+  "project": {
+    "abbreviation": null,
+    "defaultTeamImageUrl": null,
+    "description": null,
+    "id": "0eade639-ee4b-46b9-aada-f6a1075f5ccc",
+    "lastUpdateTime": "2020-08-18T11:19:14.517Z",
+    "name": "AspNetCoreWebApi",
+    "revision": 11,
+    "state": "wellFormed",
+    "url": "https://dev.azure.com/isaacbabyt/_apis/projects/0eade639-ee4b-46b9-aada-f6a1075f5ccc",
+    "visibility": "private"
+  },
+  "remoteUrl": "https://isaacbabyt@dev.azure.com/isaacbabyt/AspNetCoreWebApi/_git/aspnetcorewebapi-angularui",
+  "size": 0,
+  "sshUrl": "git@ssh.dev.azure.com:v3/isaacbabyt/AspNetCoreWebApi/aspnetcorewebapi-angularui",
+  "url": "https://dev.azure.com/isaacbabyt/0eade639-ee4b-46b9-aada-f6a1075f5ccc/_apis/git/repositories/6a321282-e85f-4c5d-8d78-c3a418193903",
+  "validRemoteUrls": null,
+  "webUrl": "https://dev.azure.com/isaacbabyt/AspNetCoreWebApi/_git/aspnetcorewebapi-angularui"
+}
+
+az pipelines create --name "aspnetcorewebapi-angularui" --description "Pipeline for aspnetcorewebapi-angularui" --repository aspnetcorewebapi-angularui --branch master --repository-type tfsgit
+
+
+$aspnetcorewebapi-angularui/RwfgCPNEi6Q9cDT1RhskFnHzCf2wh2D90losyQkfFQvls6QJcZiCzxLk8Fc4

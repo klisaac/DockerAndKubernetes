@@ -1,0 +1,99 @@
+docker run  -it -p 49153:80 --name Microservice.Api1  microserviceapi1:dev
+docker stop microservice.api1
+docker rm microservice.api1 -f
+docker rmi isaacbaby.t/microservice.api1:microservice.api1
+docker build -t isaacbaby.t/microservice.api1:microservice.api1 -f Microservice.Api1/dockerfile .
+
+docker run  -it -p 5004:80 --name microservice.api1  isaacbaby.t/microservice.api1:microservice.api1
+
+docker run -d -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=Welcome@123" -p 1433:1433 --name microservice.mssql mcr.microsoft.com/mssql/server:2019-latest
+
+docker run -d -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=Welcome@123" -p 1433:1433 --name -v app_docker_db:/var/lib/mssql/data
+
+docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=Welcome@123" -p 1433:1433 --name microsoft/mssql-server-linux:latest
+
+You can accept the EULA by specifying the --accept-eula command line option, setting the ACCEPT_EULA environment variable, or using the mssql-conf tool.
+
+vim -r /etc/samba/smb.conf
+
+cp /home/isaac/UbuntuSharedDir/localhost.cer /usr/share/ca-certificates/extra/localhost.cer
+
+sudo mv /home/isaac/UbuntuSharedDir/localhost.cer /usr/share/ca-certificates/extra/localhost.cer
+
+
+rm -f /etc/samba/smb.conf
+
+cd /usr/share/ca-certificates/extra
+
+
+-----
+
+az group create --name akshandsonlab --location 'UK South'
+version=$(az aks get-versions -l 'Central US' --query 'orchestrators[-1].orchestratorVersion' -o tsv)
+az aks create --resource-group akshandsonlab --name isaac-aks-cluster-aspnet5microservices --enable-addons monitoring --kubernetes-version $version --generate-ssh-keys --location 'UK South'
+az acr create --resource-group akshandsonlab --name isaacacrmyhealth --sku Standard --location 'UK South'
+
+ # Get the id of the Managed Identity configured for AKS
+ CLIENT_ID=$(az aks show --resource-group akshandsonlab --name isaac-aks-cluster-myhealth --query "identityProfile.kubeletidentity.clientId" --output tsv)
+
+ # Get the ACR registry resource id
+ ACR_ID=$(az acr show --name isaacacrmyhealth --resource-group akshandsonlab --query "id" --output tsv)
+
+# Create role assignment
+az role assignment create --assignee $CLIENT_ID --role acrpull --scope $ACR_ID
+
+az sql server create -l 'UK South' -g akshandsonlab -n isaac0602 -u sqladmin -p P2ssw0rd1234
+
+az sql db create -g akshandsonlab -s isaac0602 -n mhcdb --service-objective S0
+
+isaacacrmyhealth.azurecr.io
+P2ssw0rd1234
+isaac0602.database.windows.net
+sqladmin
+
+az aks get-credentials --resource-group akshandsonlab --name isaac-aks-cluster-myhealth
+
+kubectl get pods
+
+kubectl get service mhc-front --watch
+
+kubectl get service mhc-back --watch
+
+-------------------------------------------------'
+acraspnet5microservices.azurecr.io
+version=$(az aks get-versions -l 'Central India' --query 'orchestrators[-1].orchestratorVersion' -o tsv)
+
+az aks create --resource-group aspnet5microservices  --name aks-cluster-aspnet5microservices --enable-addons monitoring --kubernetes-version $version --generate-ssh-keys --location 'Central India'
+
+az acr create --resource-group aspnet5microservices  --name acraspnet5microservices --sku Standard --location 'Central India'
+
+
+ # Get the id of the Managed Identity configured for AKS
+ CLIENT_ID=$(az aks show --resource-group aspnet5microservices --name aks-cluster-aspnet5microservices --query "identityProfile.kubeletidentity.clientId" --output tsv)
+
+ # Get the ACR registry resource id
+ ACR_ID=$(az acr show --name acraspnet5microservices --resource-group aspnet5microservices --query "id" --output tsv)
+
+# Create role assignment
+az role assignment create --assignee $CLIENT_ID --role acrpull --scope $ACR_ID
+
+az sql server create -l 'Central India' -g aspnet5microservices -n aspnet5service -u sqladmin -p Welcome@123
+
+az sql db create -g aspnet5microservices -s aspnet5service -n mhcdb --service-objective S0
+
+acraspnet5microservices.azurecr.io
+Welcome@123
+aspnet5service.database.windows.net
+sqladmin
+
+az aks get-credentials --resource-group aspnet5microservices --name aks-cluster-aspnet5microservices
+kubectl get pods
+kubectl get service aspnet5microservices-api1 --watch	20.198.72.78
+kubectl get service aspnet5microservices-api2 --watch	20.198.3.159
+
+
+isaacbt.database.windows.net
+klisaac
+Azure@2020
+
+Halcot Avenue, Bexleyheath DA6 7QB Telephone

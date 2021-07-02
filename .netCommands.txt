@@ -1,0 +1,226 @@
+https://stackoverflow.com/questions/63795334/in-asp-net-core-3-1-how-can-i-schedule-a-background-task-cron-jobs-with-hoste
+https://www.c-sharpcorner.com/article/background-tasks-made-easy-with-hangfire-and-net-5/
+https://www.c-sharpcorner.com/article/implement-background-task-using-ihostedservice-in-asp-net-core/
+https://www.c-sharpcorner.com/article/angular-11-curd-application-using-web-api-with-material-design/
+https://docs.microsoft.com/en-us/azure/storage/common/storage-use-emulator
+Learning@2020
+
+dotnet build --runtime ubuntu.16.04-x64
+dotnet build ProjectName.csproj --runtime ubuntu.xx.xx-x64
+dotnet publish **path to your solution** --configuration Release --framework netcoreapp3.0 --output .**output path** --self-contained false --runtime linux-x64 --verbosity quiet
+dotnet publish -r linux-x64 -c Release --output ./bin/Release/net5.0/publish --self-contained false AspNet5Microservices.sln
+dotnet publish -r linux-x64 -c Release --output ./bin/Release/net5.0 --self-contained false AspNet5Microservices.sln
+dotnet publish -r linux-x64 -c Release --output ./bin/Release/net5.0/publish AspNet5Microservices.sln
+
+SQL server: isaacbt
+User/Password : klisaac/Azure@2020
+
+tibaby06@outlook.com/thoompumkal2021
+isaacbt.dotnet@outlook.com
+isaacbaby.t@gmail.com
+---------------
+ANIAMMA K Cyril
+kcyril.aniamma@licindia.com
+4611180100618118
+03/26 712
+lic of india, divisional office, kottayam, kerala -686001
+--------------------------------------------------------
+aspnetrun - aspnetrun@outlook.com/P@ssw0rd!
+aspnetrun password - isac.tb02bob0677M4tb0376M445867024840428
+setx DOTNET_CLI_TELEMETRY_OPTOUT 1
+
+UkAzure@2020
+
+Uk@2021mar
+Uk@2020mar
+thoompumkal2013
+thoompumkal686613
+751047
+git remote add origin https://github.com/klisaac/EmployeeApp.git
+git push -f origin master
+
+ng new "my-new-angular-app
+
+npm view  "@angular/cli" version
+npm install node-sass@latest
+ng update [pkg] --force -all
+
+ng new sb-app --skip-git
+
+ng update --force -all
+
+Commands to upgrade node and npm on windows
+=======================================
+1)	Run PowerShell as Administrator
+2)	Set-ExecutionPolicy Unrestricted -Scope CurrentUser -Force
+3)	npm install -g npm-windows-upgrade
+4)	npm-windows-upgrade
+MUNDUPADATHU, THOTTUMUKHAM MURI, MYNAGAPPALLI VILLAGE,KARUNAGAPPALLY TALUK
+
+WHIRLPOOLREF4871747
+dotnet ef dbcontext scaffold "Server=DESKTOP-6A0O1EB;User Id=sa;password=Dev@2019;Database=AspnetRun;" Microsoft.EntityFrameworkCore.SqlServer -o Models
+
+dotnet ef migrations add InitialCreate --startup-project AspNet5.Api --project AspNet5.Infrastructure --context AspNet5DataContext
+dotnet ef  database update --project AspNet5.Infrastructure --startup-project AspNet5.Api
+dotnet run --project AspNet5.Api --environment "Development"
+
+dotnet ef migrations add InitialCreate --startup-project AspNetCoreWeb.Api --project AspNetCoreWebApi.Infrastructure --context AppDataContext
+dotnet ef  database update --project AspNetCoreWebApi.Infrastructure --startup-project AspNetCoreWeb.Api
+
+dotnet run --project AspNetCoreWeb.Api --environment "Development"
+dotnet run --project Angular.UI --environment "Development"
+
+
+
+Babychettan bangalore 9845492880
+
+OLX Add Mbile 8547903271
+nidhuvillaudemy, The Complete Node.js Developer Course (3rd edition)
+
+
+
+npm install node-sass@latest
+
+
+node packages installed to ordermanagement application
+======================================================
+npm install @popperjs/core@latest
+
+npm install @popperjs/core@latest
+npm install popperjs@latest
+
+npm install @coreui/angular@latest
+npm install @coreui/coreui@latest
+npm install @coreui/icons@latest
+npm install @ng-select/ng-select@latest
+npm install @ngx-translate/core@latest
+npm install @ngx-translate/http-loader@latest
+npm install angular-slickgrid@latest
+npm install bootstrap@latest
+npm install core-js@latest
+npm install font-awesome@latest
+npm install jquery@latest
+npm install lodash@latest
+npm install moment@latest
+npm install ng-wizard@latest
+npm install ngx-bootstrap@latest
+npm install ngx-perfect-scrollbar@latest
+npm install ngx-toastr@latest
+
+    "ngx-toastr": "^12.0.1",
+
+npm install ngx-ui-loader@latest
+npm install simple-line-icons@latest
+npm install --save-dev @angular/language-service@latest
+
+npm install @coreui/coreui-plugin-chartjs-custom-tooltips@latest
+
+
+npm install chart.js@latest
+npm install ng2-charts@latest
+npm install ngx-perfect-scrollbar@latest
+
+npm install ng2-charts@2.3.0
+
++91-7592890907
+
+chr2772816
+
+ng generate interceptor core/interceptors/http-auth --skipTests=true
+ng generate interceptor core/interceptors/http-error --skipTests=true
+
+ng generate component core/layout/layout --flat -is --skipTests=true
+
+ng generate guard <name> [options]
+
+ng generate guard core/services/auth-guard.services --flat --skipTests=true
+ng generate guard core/services/auth --flat --skipTests=true
+ng generate guard core/ensure-module-loaded-once --flat --skipTests=true
+
+ng generate service core/services/auth-guard --flat --skipTests=true
+
+ng generate service core/services/auth --flat --skipTests=true
+ng generate service core/services/category-data --flat --skipTests=true
+ng generate service core/services/customer-data --flat --skipTests=true
+ng generate service core/services/product-data --flat --skipTests=true
+ng generate service core/services/logger --flat --skipTests=true
+ng generate service core/services/page --flat --skipTests=true
+ng generate service core/services/spinner --flat --skipTests=true
+ng generate service core/services/validation --flat --skipTests=true
+
+ng generate module core/core --flat
+
+
+ng generate pipe shared/pipes/capitalize --flat --skipTests=true
+ng generate pipe shared/pipes/trim --flat --skipTests=true
+
+ng generate component shared/validation-message/validation-message --flat --skipTests=true --inlineTemplate=true
+
+
+ng generate interface shared/interfaces/product
+ng generate interface shared/interfaces/category
+ng generate interface shared/interfaces/customer
+
+ng generate module shared/shared --flat
+
+
+
+ng generate component views/about/about --flat --skipTests=true
+ng generate component views/category/category-list/category-list --flat --skipTests=true
+ng generate module views/category/category --flat
+ng generate module views/category/category-routing --flat --routing=true --routingScope=Root
+ng generate module views/category/category-routing --flat --routing=true --module=category
+
+
+ng generate component views/customer/customer-cart/customer-cart --flat --skipTests=true
+ng generate component views/customer/customer-detail/customer-detail --flat --skipTests=true
+ng generate component views/customer/customer-edit/customer-edit --flat --skipTests=true
+ng generate component views/customer/customer-list/customer-list --flat --skipTests=true
+ng generate component views/customer/customer-list/customer-grid/customer-grid --flat --skipTests=true
+ng generate component views/customer/customer-list/filter-textbox/filter-textbox --flat --skipTests=true
+ng generate component views/customer/customer-order/customer-order --flat --skipTests=true
+ng generate module views/customer/customer-routing --flat --routing=true --routingScope=Root
+ng generate module views/customer/customer --flat
+
+ng generate component views/dashboard/dashboard --flat --skipTests=true
+ng generate component views/error/p404  --flat --skipTests=true --inlineStyle=true --skipSelector=true
+ng generate component views/error/p500  --flat --skipTests=true --inlineStyle=true --skipSelector=true
+
+ng generate component views/login/login --flat --skipTests=true --inlineStyle=true
+
+
+ng generate component views/product/product-delete/product-delete-modal --flat --skipTests=true
+ng generate component views/product/product-detail/product-detail --flat --skipTests=true --skipSelector=true
+ng generate component views/product/product-edit/product-edit --flat --skipTests=true --skipSelector=true
+ng generate component views/product/product-list/product-list --flat --skipTests=true --skipSelector=true
+ng generate module views/product/product --flat
+ng generate module views/product/product-routing --flat --routing=true --module=product
+
+ng generate component views/register/register --flat --skipTests=true --inlineStyle=true
+
+ng generate module views/category/category-routing --flat --routing=true --routingScope=Root
+ng generate module views/category/category-routing --flat --routing=true --module=category
+
+<!-- (ngModelChange)="onCategorySelected()"> -->
+
+
+Azure VM RDP  user id & password -  isaacbaby.t/Welcome@1234
+Azure VM IP address - 20.195.24.5:3389
+Azure Sql server name - isaacbabyt-sql.database.windows.net
+Azure Sql server user name - isaacbabyt
+Azure Sql server password - AzureSql@2020
+
+Welcome@1234
+
+
+node --max_old_space_size=8192 node_modules/#angular/cli/bin/ng build --prod
+
+
+
+Module build failed (from ./node_modules/mini-css-extract-plugin/dist/loader.js):ModuleBuildError: Module build failed (from ./node_modules/sass-loader/dist/cjs.js):SassError: $color2: "success" is not a color.
+
+
+
+
+
+

@@ -1,0 +1,48 @@
+git init
+git add .
+git commit -m "Initial commit"
+git remote add origin "	t"
+git push origin master
+git push -f origin master
+https://www.youtube.com/watch?v=6GZjFewMXm4
+
+https://github.com/klisaac/AspNet5WebApiAngular.git
+
+git remote add origin "https://github.com/klisaac/AspNet5WebApiAngular.git"
+
+git remote add origin "https://isaacdotnetazure@dev.azure.com/isaacdotnetazure/AspNet5Microservices/_git/AspNet5Microservices"
+
+
+dotnet new gitignore
+dotnet new
+
+
+Stop tracking files that should be ignored
+To stop tracking the files in the ignore file open a command prompt and navigate to the directory that contains your solution file (.sln) and run the following commands.
+
+git rm -r --cached .
+git add .
+git commit -am "Remove ignored files"
+
+
+git remote add origin "https://github.com/klisaac/AngularUI.git"
+
+git checkout master.
+git rm -r src.
+
+
+
+az webapp config appsettings list --name "angular-ui" --resource-group "ResourceDotNetApps" --query "[?name=='WEBSITE_NODE_DEFAULT_VERSION'].value"
+
+az webapp config appsettings list --name "angular-ui" --resource-group "ResourceDotNetApps" --query "[?name=='WEBSITE_NODE_DEFAULT_VERSION'].value"
+
+System.DefaultWorkingDirectory
+
+$(System.DefaultWorkingDirectory)/<build pipiline name>/drop/<zip folder name>.
+
+$(System.DefaultWorkingDirectory)/_NodeJsAngularUI-CI/drop/angularui.zip
+
+
+https://dev.azure.com/isaacbabyt/_apis/resources/Containers/10404983?itemPath=drop%2Fangularui.zip
+
+https://itnext.io/why-and-how-i-implemented-cqrs-and-mediator-patterns-in-a-microservice-b07034592b6d
